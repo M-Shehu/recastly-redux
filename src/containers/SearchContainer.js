@@ -12,8 +12,8 @@ var mapDispatchToProps = (dispatch) => {
 }
 
 var mapStateToProps = (store) => (
-    {videoList: store.videoList,
-     currentVideo : store.currentVideo}
+    {videos: store.videoList,
+     video : store.currentVideo}
 )
 
 var SearchContainer = connect(mapStateToProps, mapDispatchToProps)(Search);
