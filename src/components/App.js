@@ -8,6 +8,8 @@ import changeVideo from '../actions/currentVideo.js';
 import changeVideoList from '../actions/videoList.js';
 import exampleVideoData from '../data/exampleVideoData.js';
 import store from '../store/store.js';
+import Search from './Search.js';
+
 
 export default class App extends React.Component {
   constructor(props) {
@@ -27,6 +29,11 @@ export default class App extends React.Component {
     this.setState({currentVideo: video});
   }
 
+  handleSearchInputChange(searchInput){
+    //this.call getYoutube?
+    console.log('now')
+  }
+  
   getYouTubeVideos(query) {
     var options = {
       key: this.props.API_KEY,
@@ -48,7 +55,7 @@ export default class App extends React.Component {
       <div>
         <nav className="navbar">
           <div className="col-md-6 col-md-offset-3">
-            <Search handleSearchInputChange={handleSearchInputChange}/>
+            <Search handleSearchInputChange={this.props.handleSearchInputChange}/>
           </div>
         </nav>
         <div className="row">

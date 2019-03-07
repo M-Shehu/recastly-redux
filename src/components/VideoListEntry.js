@@ -3,7 +3,7 @@ import React from 'react';
 var VideoListEntry = ({video, handleVideoListEntryTitleClick}) => (
   <div className="video-list-entry">
     <div className="media-left media-middle">
-      <img className="media-object" src={video.snippet.thumbnails.default.url} alt="" />
+      <img onClick={() => handleVideoListEntryTitleClick(video)} className="media-object" src={video.snippet.thumbnails.default.url} alt="" />
     </div>
     <div className="media-body">
       <div
