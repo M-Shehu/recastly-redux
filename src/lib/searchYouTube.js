@@ -1,7 +1,8 @@
+
 var searchYouTube = ({key, query, max = 5}, callback) => {
   $.get('https://www.googleapis.com/youtube/v3/search', {
     part: 'snippet',
-    key: key,
+    key: key, 
     q: query,
     maxResults: max,
     type: 'video',
@@ -18,5 +19,6 @@ var searchYouTube = ({key, query, max = 5}, callback) => {
       );
     });
 };
-
 export default searchYouTube;
+
+
